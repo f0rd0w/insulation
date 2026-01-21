@@ -1,0 +1,6 @@
+#!/bin/bash
+killall  thermalmonitord
+
+rm /var/mobile/Library/Preferences/com.apple.coreduetd.plist
+
+exit 0
