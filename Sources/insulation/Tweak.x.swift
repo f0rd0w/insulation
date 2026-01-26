@@ -5,6 +5,7 @@ class CommonProductClassHook: ClassHook<CommonProduct> {
   func initProduct(_ arg: Any?) -> CommonProduct? {
     // return nil;
     let res = orig.initProduct(arg);
+    IPowerHepler.shared.commonProductObject = target;
     target.putDevice(inThermalSimulationMode: "nominal");
     return res;
   }
@@ -36,5 +37,16 @@ class NSDictionaryHook: ClassHook<NSDictionary> {
       }
     }
     return res;
+  }
+}
+
+class InsulationTInit: Tweak {
+  required init() {
+    let center = CFNotificationCenterGetDarwinNotifyCenter();
+    let executePuppetEventName = "com.be-huge.insulation-executePuppetEvent" as CFString;
+    let observer = UnsafeMutableRawPointer(Unmanaged.passRetained(self).toOpaque());
+    CFNotificationCenterAddObserver(center, observer, { _, _, _, _, _ in
+      IPowerHepler.shared.executePuppetEvent();
+    }, executePuppetEventName, nil, .deliverImmediately);
   }
 }

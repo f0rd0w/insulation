@@ -32,8 +32,40 @@
 			<key>placeholder</key>
 			<string>仅支持数字，否则不生效。</string>
 		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>降低频率（模拟）</string>
+			<key>footerText</key>
+			<string>我也不知道这个功能有什么用，但要就支持一下吧。</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSegmentCell</string>
+			<key>default</key>
+			<string>nominal</string>
+			<key>defaults</key>
+			<string>com.be-huge.insulation-prefs</string>
+			<key>key</key>
+			<string>thermalPuppetValue</string>
+			<key>validValues</key>
+			<array>
+				<string>nominal</string>
+				<string>light</string>
+				<string>moderate</string>
+				<string>heavy</string>
+			</array>
+			<key>validTitles</key>
+			<array>
+				<string>无</string>
+				<string>轻微</string>
+				<string>中度</string>
+				<string>重度</string>
+			</array>
+		</dict>
 	</array>
 	<key>title</key>
-	<string>InsulationPrefs</string>
+	<string>Insulation</string>
 </dict>
 </plist>
