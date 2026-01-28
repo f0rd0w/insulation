@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import <rootless.h>
+#import <roothide.h>
 #import <spawn.h>
 #include <stdbool.h>
 
@@ -14,5 +14,5 @@
 #import "./NSDictionary_header/NSDictionary.h"
 
 static NSString *_Nonnull rootlessPath(NSString* _Nonnull path) {
-  return ROOT_PATH_NS(path);
+  return jbroot(path);
 }
