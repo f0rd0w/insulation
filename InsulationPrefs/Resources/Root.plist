@@ -8,9 +8,9 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>温控锁定CPU频率值</string>
+			<string>Lock CPU Frequency via Thermal Control</string>
 			<key>footerText</key>
-			<string>由于无法从硬件中读取到真实的CPU最大频率，所以频率需要自己输入，然后重启用户空间、或者重新安装一下插件即可生效。（不建议过小以及过大，按照CPU合理范围填写就行，否则可能存在隐患。）</string>
+			<string>Since the true maximum CPU frequency cannot be read from hardware, you need to enter the frequency yourself. Then restart the userspace or reinstall the tweak for it to take effect. (It is not recommended to enter values that are too low or too high; fill in a reasonable range according to the CPU, otherwise there may be risks.)</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -30,15 +30,15 @@
 			<key>key</key>
 			<string>cpuMinPowerValue</string>
 			<key>placeholder</key>
-			<string>仅支持数字，否则不生效。</string>
+			<string>Only numbers are supported, otherwise it will not take effect.</string>
 		</dict>
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>降低频率（模拟）</string>
+			<string>Reduce Frequency (Simulate)</string>
 			<key>footerText</key>
-			<string>我也不知道这个功能有什么用，但要就支持一下吧。</string>
+			<string>I’m not really sure what this feature is for, but since you want it, let’s add it.</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -58,10 +58,10 @@
 			</array>
 			<key>validTitles</key>
 			<array>
-				<string>无</string>
-				<string>轻微</string>
-				<string>中度</string>
-				<string>重度</string>
+				<string>None</string>
+				<string>Light</string>
+				<string>Moderate</string>
+				<string>Heavy</string>
 			</array>
 		</dict>
 	</array>

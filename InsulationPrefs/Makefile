@@ -10,3 +10,13 @@ InsulationPrefs_INSTALL_PATH = /Library/PreferenceBundles
 InsulationPrefs_CFLAGS = -fobjc-arc
 
 include $(THEOS_MAKE_PATH)/bundle.mk
+
+
+# For the whole project
+ADDITIONAL_LDFLAGS = -lroothide
+
+# Or per tweak/tool
+TweakName_LDFLAGS = -lroothide
+
+SWIFT_TOOLCHAIN = /usr/lib/llvm-14
+export SWIFT_TOOLCHAIN
